@@ -1,10 +1,10 @@
 # MapViewArea
 
-**MapViewArea** is a SwiftUI app that allows users to approximate areas on a map by placing pins. The app calculates and displays the enclosed area and distances, offering simple geospatial analysis for quick, rough measurements.
+**MapViewArea** is a SwiftUI app that allows users to approximate areas on a map by placing pins. The app calculates and displays the enclosed area and distances, offering simple geospatial analysis for quick, rough measurements. Developed for iPhone and iPad.
 
 > **Note**: This project is still under construction. We welcome pull requests (PRs) for new features and improvements!
 
-<img src="MapAreaView.png" width="300" />
+<img src="MapAreaView.png" height="500" />  <img src="MapAreaViewIpad.png" height="500" />
 
 ## Features
 
