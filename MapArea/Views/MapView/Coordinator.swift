@@ -52,8 +52,8 @@ class Coordinator: NSObject, MKMapViewDelegate {
             
             let center = self.polygonCenter(of: polygon)
             let areaLabel = MKPointAnnotation()
-            areaLabel.coordinate = center
-            areaLabel.title = String(format: "%.2f m²", area)
+//            areaLabel.coordinate = center
+//            areaLabel.title = String(format: "%.2f m²", area)
             parent.areaLabel = areaLabel
 
             let firstCoordinate = coordinates.first!
@@ -70,6 +70,11 @@ class Coordinator: NSObject, MKMapViewDelegate {
             let distanceLabel = MKPointAnnotation()
             distanceLabel.coordinate = midpoint
             distanceLabel.title = String(format: "%.2f meters", distanceBetweenFirstAndLast)
+            if parent.distanceLabels.count > 3 {
+                // delete the title from the line between the last and first pin
+                parent.distanceLabels.remove(at: parent.distanceLabels.count - 2)
+            }
+
             parent.distanceLabels.append(distanceLabel)
         }
     }
