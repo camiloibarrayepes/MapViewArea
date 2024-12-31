@@ -18,6 +18,7 @@ struct MapView: UIViewRepresentable {
     @Binding var areaOverlay: MKPolygon? // Closed area
     @Binding var areaLabel: MKPointAnnotation? // Area label
     @Binding var areaInSquareMeters: Double // Area in square meters
+    @ObservedObject var viewModel: MapViewModel
 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
